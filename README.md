@@ -5,7 +5,9 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 
 2.Prerequisites
   Docker: Version 20.10.x or later
+  
   Docker Compose: Version 1.28.x or later
+  
   Git: Version control to clone the repository
 
 3.Setup and Installation  
