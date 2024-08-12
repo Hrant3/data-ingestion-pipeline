@@ -57,7 +57,7 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 
 7. Running the application
    
-     Start the application by running /usr/lib/docker/cli-plugins/docker-compose up
+     Start the application by running ```/usr/lib/docker/cli-plugins/docker-compose up```
 
 6.1 ## Testing the setup
 
