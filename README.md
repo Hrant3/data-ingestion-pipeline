@@ -26,29 +26,47 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 5. Database Schema Explanation
    
       The database consists of a single table, metrics, with the following columns
+   
         id: Serial primary key.
+   
         timestamp: The time when the metric was recorded.
+   
         user_id: The identifier for the user.
+   
         session_id: The session identifier.
+   
         metric_type: The type of metric (e.g., talked_time,microphone_used,speaker_used).
+   
         metric_value: The value of the metric.
+   
         device_id: The identifier for the user's device.
+   
         app_version: The version of the application.
+   
         location: The location where the metric was recorded.
+   
         sentiment_score: The sentiment score associated with the user’s interaction
+   
     Indices
+   
         Indexes are created on timestamp, user_id, session_id, and metric_type to optimize query performance.
    
     Stored Procedures:
+   
         insert_metric: Procedure to insert a new metric into the metrics table.
 
 7. Running the application
+   
      Start the application by running /usr/lib/docker/cli-plugins/docker-compose up
 
 6.1 Testing the setup
+
      curl -X POST http://localhost:5000/ingest \
+     
 -H "Content-Type: application/json" \
+
 -d '[{
+
     "timestamp": "2024-08-12T12:00:00+00:00",
     "user_id": "user456",
     "session_id": "session789",
