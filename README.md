@@ -21,9 +21,10 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 
   3. Build and Start Containers:
      
-       /usr/lib/docker/cli-plugins/docker-compose up --build (first should be the path where your docker-compose is )
+       /usr/lib/docker/cli-plugins/docker-compose up --build   (first should be the path where your docker-compose is )
 
 5. Database Schema Explanation
+   
       The database consists of a single table, metrics, with the following columns
         id: Serial primary key.
         timestamp: The time when the metric was recorded.
@@ -41,7 +42,7 @@ This project sets up a data ingestion pipeline that processes user metrics data 
     Stored Procedures:
         insert_metric: Procedure to insert a new metric into the metrics table.
 
-6. Running the application
+7. Running the application
      Start the application by running /usr/lib/docker/cli-plugins/docker-compose up
 
 6.1 Testing the setup
