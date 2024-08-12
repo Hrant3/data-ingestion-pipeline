@@ -15,13 +15,13 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 
   1. Clone the repository.
      
-       git clone https://github.com/yourusername/data-ingestion-pipeline.git
+       ```git clone https://github.com/yourusername/data-ingestion-pipeline.git```
 
-       cd data-ingestion-pipeline
+       ```cd data-ingestion-pipeline```
 
   3. Build and Start Containers:
      
-       /usr/lib/docker/cli-plugins/docker-compose up --build   (first should be the path where your docker-compose is )
+       ```/usr/lib/docker/cli-plugins/docker-compose up --build```   (first should be the path where your docker-compose is )
 
 5. Database Schema Explanation
    
