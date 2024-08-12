@@ -80,27 +80,42 @@ curl -X POST http://localhost:5000/ingest \
 }]'
 
 
-6.2 We can also test stored procedure where you simply call insert_metric with arguments
+### 6.2 Testing the Stored Procedure
 
-    First we need to activate the stored procedure. For that we need to run this command.
+You can test the stored procedure by following these steps:
+
+1. **Activate the Stored Procedure**:
+    - Run the following command to create the procedure:
+    
+    ```bash
     docker exec -it data-ingestion-pipeline-db-1 psql -U user -d metrics_db -f /app/init_db.sql
-    This creates the procedure. 
-    Then we go to the db shell with this command.
+    ```
+
+2. **Access the Database Shell**:
+    - Use this command to access the database shell:
+    
+    ```bash
     /usr/lib/docker/cli-plugins/docker-compose exec db psql -U user -d metrics_db
-    and run the procedure code
+    ```
 
+3. **Run the Stored Procedure**:
+    - Once inside the database shell, execute the following command to call the `insert_metric` procedure:
+    
+    ```sql
     CALL insert_metric(
-    '2024-08-12 12:00:00'::TIMESTAMP,
-    'user123'::VARCHAR,
-    'session456'::VARCHAR,
-    'talked_time'::VARCHAR,
-    '300'::VARCHAR,
-    'device789'::VARCHAR,
-    '1.0.0'::VARCHAR,
-    'New York'::VARCHAR,
-    0.9::FLOAT
-);
+        '2024-08-12 12:00:00'::TIMESTAMP,
+        'user123'::VARCHAR,
+        'session456'::VARCHAR,
+        'talked_time'::VARCHAR,
+        '300'::VARCHAR,
+        'device789'::VARCHAR,
+        '1.0.0'::VARCHAR,
+        'New York'::VARCHAR,
+        0.9::FLOAT
+    );
+    ```
 
+This will insert a new metric into the `metrics` table.
 
 
     
