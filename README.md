@@ -59,14 +59,15 @@ This project sets up a data ingestion pipeline that processes user metrics data 
    
      Start the application by running /usr/lib/docker/cli-plugins/docker-compose up
 
-6.1 Testing the setup
+6.1 ## Testing the setup
 
-     curl -X POST http://localhost:5000/ingest \
-     
+
+You can test the data ingestion by sending a `POST` request to the `/ingest` endpoint:
+
+```bash
+curl -X POST http://localhost:5000/ingest \
 -H "Content-Type: application/json" \
-
 -d '[{
-
     "timestamp": "2024-08-12T12:00:00+00:00",
     "user_id": "user456",
     "session_id": "session789",
@@ -77,6 +78,7 @@ This project sets up a data ingestion pipeline that processes user metrics data 
     "location": "Los Angeles",
     "sentiment_score": 0.8
 }]'
+
 
 6.2 We can also test stored procedure where you simply call insert_metric with arguments
 
