@@ -4,6 +4,7 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 
 
 2.Prerequisites
+
   Docker: Version 20.10.x or later
   
   Docker Compose: Version 1.28.x or later
@@ -13,13 +14,16 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 3.Setup and Installation  
 
   1. Clone the repository.
+     
        git clone https://github.com/yourusername/data-ingestion-pipeline.git
+
        cd data-ingestion-pipeline
 
-  2. Build and Start Containers:
+  3. Build and Start Containers:
+     
        /usr/lib/docker/cli-plugins/docker-compose up --build (first should be the path where your docker-compose is )
 
-4. Database Schema Explanation
+5. Database Schema Explanation
       The database consists of a single table, metrics, with the following columns
         id: Serial primary key.
         timestamp: The time when the metric was recorded.
@@ -37,7 +41,7 @@ This project sets up a data ingestion pipeline that processes user metrics data 
     Stored Procedures:
         insert_metric: Procedure to insert a new metric into the metrics table.
 
-5. Running the application
+6. Running the application
      Start the application by running /usr/lib/docker/cli-plugins/docker-compose up
 
 6.1 Testing the setup
