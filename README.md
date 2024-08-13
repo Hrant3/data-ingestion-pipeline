@@ -131,7 +131,7 @@ This will insert a new metric into the `metrics` table.
       Load Balancer.
             When we scale by adding more containers, we might need to add a load balancer to distribute traffic
 
- evenly among the containers.
+            evenly among the containers.
 
 8. Assumptions
 
