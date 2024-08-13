@@ -15,7 +15,7 @@ This project sets up a data ingestion pipeline that processes user metrics data 
 
   1. Clone the repository.
      
-       ```git clone https://github.com/yourusername/data-ingestion-pipeline.git```
+       ```git clone https://github.com/Hrant3/data-ingestion-pipeline.git```
 
        ```cd data-ingestion-pipeline```
 
