@@ -118,6 +118,39 @@ You can test the stored procedure by following these steps:
 This will insert a new metric into the `metrics` table.
 
 
+7. Maintaining and Extending the Pipeline
+      Adding new metrics. Update the `metrics` table schema if new types of metrics are introduced.
+        
+
+      Scaling. Adjust Docker Compose settings to increase number of containers
+            Docker allows us to to scale services by specifying number of container instances we want to run. For example, if our application is under heavy load , we can run multiple       
+            instances of the same service.
+            ``` docker-compose up --scale app=3 ``` - For example using this command we can start three instances of the  ```app``` service , allowing to handle more requests simultaneously.
+      Load Balancer.
+            When we scale by adding more containers, we might need to add a load balancer to distribute traffic evenly among the containers.
+
+8. Assumptions
+
+      The application ensures that input data is correctly formatted.
+      The database credentials are stored securely in environment variables.
+
+9. Limitations
+
+      Error handling and validation are minimal
+
+10. Future improvements
+
+      Implement authentication and authorization.
+
+      Add data validation and error handling.
+
+      Scale the application using Kubernetes.
+
+
+
+
+
+
 
 
 
