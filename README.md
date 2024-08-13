@@ -18,8 +18,11 @@ This project sets up a data ingestion pipeline that processes user metrics data 
        ```git clone https://github.com/Hrant3/data-ingestion-pipeline.git```
 
        ```cd data-ingestion-pipeline```
+     
+  3. In your Docker Desktop go to Settings -> Resources -> File sharing -> Add the path of data-ingestion-pipeline folder.
+  
 
-  3. Build and Start Containers:
+  4. Build and Start Containers:
      
        ```/usr/lib/docker/cli-plugins/docker-compose up --build```   (first should be the path where your docker-compose is )
 
