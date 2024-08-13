@@ -1,0 +1,35 @@
+# docker-compose.yml
+
+
+services:
+  app:
+    #network_mode: "host"
+    build: .
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/metrics_db
+      #- DATABASE_URL = "postgresql://user:password@localhost:5432/metrics_db"
+
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    command: ["python" , "app.py"]
+
+  db:
+    #network_mode: "host"
+    image: postgres:13
+    environment:
+      POSTGRES_DB: metrics_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - .:/app
+    ports:
+      - "5432:5432"
+
+volumes:
+  db_data:
+    driver: local
