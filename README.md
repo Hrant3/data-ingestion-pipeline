@@ -124,11 +124,8 @@ This will insert a new metric into the `metrics` table.
 
       Scaling. Adjust Docker Compose settings to increase number of containers
             Docker allows us to to scale services by specifying number of container instances we want to run. For
- example, if our application is under heavy load , we can run multiple
-    
-            instances of the same service.
+ example, if our application is under heavy load , we can run multiple instances of the same service.
             ``` docker-compose up --scale app=3 ``` - For example using this command we can start three instances
-
  of the  ```app``` service , allowing to handle more requests simultaneously.
 
       Load Balancer.
