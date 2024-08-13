@@ -1,0 +1,41 @@
+app
+app.py
+docker-compose
+docker-compose.yml
+Dockerfile
+init_db.sql
+requirements.txt
+test.py
+db-1  | 
+db-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1  | 
+db-1  | 2024-08-09 13:33:04.712 UTC [1] LOG:  starting PostgreSQL 13.16 (Debian 13.16-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+db-1  | 2024-08-09 13:33:04.712 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1  | 2024-08-09 13:33:04.712 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1  | 2024-08-09 13:33:04.721 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2024-08-09 13:33:04.729 UTC [26] LOG:  database system was shut down at 2024-08-09 13:33:00 UTC
+db-1  | 2024-08-09 13:33:04.736 UTC [1] LOG:  database system is ready to accept connections
+db-1  | 2024-08-09 13:34:30.718 UTC [1] LOG:  received fast shutdown request
+db-1  | 2024-08-09 13:34:30.721 UTC [1] LOG:  aborting any active transactions
+db-1  | 2024-08-09 13:34:30.726 UTC [1] LOG:  background worker "logical replication launcher" (PID 32) exited with exit code 1
+db-1  | 2024-08-09 13:34:30.726 UTC [27] LOG:  shutting down
+db-1  | 2024-08-09 13:34:30.745 UTC [1] LOG:  database system is shut down
+db-1  | 
+db-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1  | 
+db-1  | 2024-08-09 13:34:47.701 UTC [1] LOG:  starting PostgreSQL 13.16 (Debian 13.16-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+db-1  | 2024-08-09 13:34:47.701 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1  | 2024-08-09 13:34:47.701 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1  | 2024-08-09 13:34:47.708 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2024-08-09 13:34:47.718 UTC [26] LOG:  database system was shut down at 2024-08-09 13:34:30 UTC
+db-1  | 2024-08-09 13:34:47.727 UTC [1] LOG:  database system is ready to accept connections
+db-1  | 2024-08-09 14:13:55.921 UTC [33] ERROR:  relation "metrics" does not exist at character 22
+db-1  | 2024-08-09 14:13:55.921 UTC [33] STATEMENT:  
+db-1  | 	        INSERT INTO metrics (timestamp, user_id, session_id, metric_type, metric_value, device_id, app_version, location, sentiment_score)
+db-1  | 	        VALUES ('2024-08-08T10:00:00+00:00'::timestamptz,'user123','session456','talked_time','300','device789','1.0.0','New York',0.9)
+db-1  | 	    
+db-1  | 2024-08-09 14:14:47.318 UTC [33] ERROR:  relation "metrics" does not exist at character 22
+db-1  | 2024-08-09 14:14:47.318 UTC [33] STATEMENT:  
+db-1  | 	        INSERT INTO metrics (timestamp, user_id, session_id, metric_type, metric_value, device_id, app_version, location, sentiment_score)
+db-1  | 	        VALUES ('2024-08-08T10:00:00+00:00'::timestamptz,'user123','session456','talked_time','300','device789','1.0.0','New York',0.9)
+db-1  | 	    
